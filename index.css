@@ -1,0 +1,501 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* Noto Sans KR 폰트 */
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#full-page {
+    height: 100%;
+}
+#gradient {
+    height: 100%;
+}
+.section {
+    height: 100%;
+}
+/* 첫 페이지 */
+.s0 {
+    background: url(/HSHportfolio/img/night.svg) 100% 100%;
+    background-size: cover;
+}
+.center {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.down {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    border-radius: 20px;
+    background: transparent;
+    border: 4px solid #fff;
+    overflow: hidden;
+}
+.down::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, 0);
+    animation: animate 1s linear infinite;
+}
+.down::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%, 0);
+    border-radius: 3px;
+}
+@keyframes animate {
+    0% {
+        transform: translate(-50%, 20px);
+        opacity: 1;
+    }
+    80% {
+        transform: translate(-50%, 60px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 100px);
+        opacity: 0;
+    }
+}
+/* 텍스트 정 가운데 고정 */
+h1.ONE,
+h1.TWO {
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: transparent;
+    margin: 0;
+    position: absolute;
+    left: 10%;
+    font-size: 90px;
+    font-weight: 900;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+/* 커서 역할 */
+h1.ONE::before {
+    content: "SOO-HO'S";
+    top: -130px;
+}
+h1.TWO::before {
+    content: "PORTFOLIO.";
+    border-right: 3px solid white;
+    animation: typing 3.5s steps(24, end), blink-caret .5s step-end infinite
+}
+h1.ONE::before,
+h1.TWO::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-shadow: 1px 2px 0 gray, 2px 4px 0 gray;
+    overflow: hidden;
+}
+@keyframes typing {
+    0% { width: 0;}
+    50% { width: 100%;}
+}
+@keyframes blink-caret {
+    from,
+    to {border-color: transparent}
+    50% {border-color: white}
+}
+/* 두번째 페이지 */
+.about {
+    width: 1612px;
+    height: 906px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+ul {
+    list-style:none;
+}
+.ME {
+    width: 100%;
+    position: relative;
+    left: 90px;
+    top: 24px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 109px;
+    letter-spacing: -0.1em;
+}
+.info {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    gap: 135px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.picture {
+    width: 426px;
+    height: 426px;
+    background: url(/HSHportfolio/img/profile.svg);
+}
+.inner {
+    width: 916px;
+    height: 653px;
+    gap: 100px;
+    display: flex;
+}
+.inner h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    letter-spacing: -0.1em;
+}
+.inner li {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.05em;
+}
+.inner ul, .profile, .Licence, .Education, .Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+.run {
+    position: absolute;
+    top: -22%;
+    left: 10%;
+    background: url(/HSHportfolio/img/sonic.png);
+    overflow: hidden;
+    width: calc(3225px / 14);
+    height: 71px;
+    animation: run 1s steps(14) infinite,
+                move 5s linear infinite;
+}
+@keyframes run {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1075px;
+    }
+}
+@keyframes move {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(1200px);
+    }
+}
+.First,
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+}
+.First {
+    gap: 65px;
+}
+.second {
+    gap: 148px;
+}
+.Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 25px; 
+}
+.draw,
+.script {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 20px;
+}
+.draw div,
+.script div {
+    width: 110px;
+}
+.draw div {
+    height: 110px;
+}
+.script div {
+    height: 125px;
+}
+.Ps {
+    background: url(/HSHportfolio/img/Ps.svg) no-repeat;
+}
+.Ai {
+    background: url(/HSHportfolio/img/Ai.svg) no-repeat;
+}
+.Id {
+    background: url(/HSHportfolio/img/Id.svg) no-repeat;
+}
+.Figma {
+    background: url(/HSHportfolio/img/Figma.svg) no-repeat;
+}
+.html {
+    background: url(/HSHportfolio/img/html.svg) no-repeat;
+}
+.css {
+    background: url(/HSHportfolio/img/css.svg) no-repeat;
+}
+.js {
+    background: url(/HSHportfolio/img/js.svg) no-repeat;
+}
+.jq {
+    background: url(/HSHportfolio/img/jq.svg) no-repeat;
+}
+/* 웹 페이지 작업물 */
+.s2 {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+.s2 .inner {
+    background: #fff;
+    opacity: 80%;
+    height: 900px;
+}
+.s2 .inner h2 {
+    position: relative;
+    width: 200px;
+    top: 20px;
+    left: 100px;
+}
+.s2 .project {
+    display: flex;
+    gap: 20px;
+    width: 1435px;
+    height: 650px;
+    margin: 0 auto;
+    transform: translateY(100px);
+}
+.s2 .project .img {
+    display: inline-block;
+    background-size: cover;
+    width: 865px;
+    height: 648px;
+}
+.s2 .project .img1 {
+    background: url(/HSHportfolio/img/Mockup1.svg) no-repeat;
+}
+.s2 .project .logo {
+    width: 217px;
+    height: 84px;
+    background: url(/HSHportfolio/img/Plogo.svg) no-repeat 50% 50%;
+}
+.content {
+    width: calc(100% - 650px);
+    margin: auto;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.content dl {
+    display:flex;
+    flex-flow:row wrap;
+}
+.content  dl dt {
+    width:25%;
+    padding:10px 0;
+    font-weight: 700;
+    color:#222;
+}
+.content dl dd {
+    width:75%;
+    padding:10px 0;
+    font-weight: 300;
+}
+.content .link {
+    display:flex;
+	flex-flow:row wrap;
+}
+.content .link a {
+    width: 155px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align : center;
+    text-decoration: none;
+    text-transform:capitalize;
+	background:#0096fa;
+	color:#fff;
+	border-radius:7px;
+	transition: all 0.5s;
+}
+.content .link a:hover {
+    color:#0096fa;
+    box-shadow: 0 0 5px 5px;
+	background: none;
+}
+/* 슬라이드 버튼 */
+.s2 button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+}
+.s2 .slick-prev,
+.s2 .slick-next {
+  cursor: pointer;
+}
+.s2 .slick-prev {
+  left: 10px;
+}
+.s2 .slick-next {
+  right: 10px;
+}
+.s2 .slick-prev::before,
+.s2 .slick-next::before{
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+}
+.s2 .slick-prev::after,
+.s2 .slick-next::after{
+  display: none;
+}
+.s2 .slick-prev::before {
+  background: url(/HSHportfolio/img/left.svg) no-repeat 50% 50% / contain;
+}
+.s2 .slick-next::before {
+  background: url(/HSHportfolio/img/right.svg) no-repeat 50% 50% / contain;
+}
+
+/* 우측 위치 이동 버튼 */
+#fp-nav {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translate3d(0,-50%,0);
+}
+#fp-nav.fp-right {
+    right: 17px;
+}
+#fp-nav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 7px;
+    position:relative;
+}
+#fp-nav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a:active span
+#fp-nav ul li:hover a:active span {
+    height: 15px;
+    width: 15px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+ }
+#fp-nav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 5px;
+    width: 5px;
+    border: 0;
+    background: yellow;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a:active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.fp-right {
+    right: 20px;
+}
+#fp-nav ul li .fp-tooltip.fp-left {
+    left: 20px;
+}

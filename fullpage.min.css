@@ -1,0 +1,215 @@
+/*!
+ * fullPage 4.0.10
+ * https://github.com/alvarotrigo/fullPage.js
+ *
+ * @license GPLv3 for open source use only
+ * or Fullpage Commercial License for commercial use
+ * http://alvarotrigo.com/fullPage/pricing/
+ *
+ * Copyright (C) 2021 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
+ */
+ html.fp-enabled,
+ .fp-enabled body {
+     margin: 0;
+     padding: 0;
+     overflow:hidden;
+ 
+     /*Avoid flicker on slides transitions for mobile phones #336 */
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ .fp-section {
+     position: relative;
+     -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+     -moz-box-sizing: border-box; /* <=28 */
+     box-sizing: border-box;
+     height: 100%;
+     display: block;
+ }
+ .fp-slide {
+     float: left;
+ }
+ .fp-slide, .fp-slidesContainer {
+     height: 100%;
+     display: block;
+ }
+ .fp-slides {
+     z-index:1;
+     height: 100%;
+     overflow: hidden;
+     position: relative;
+     -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+     transition: all 0.3s ease-out;
+ }
+ .fp-table{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+ }
+ /* .fp-table::before , 
+ .fp-table::after {
+       content:'';
+       flex:1;
+ } */
+ .fp-slidesContainer {
+     float: left;
+     position: relative;
+ }
+ .fp-controlArrow {
+     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+     -moz-user-select: none; /* mozilla browsers */
+     -khtml-user-select: none; /* webkit (konqueror) browsers */
+     -ms-user-select: none; /* IE10+ */
+     position: absolute;
+     z-index: 4;
+     top: 50%;
+     cursor: pointer;
+     margin-top: -38px;
+     -webkit-transform: translate3d(0,0,0);
+     -ms-transform: translate3d(0,0,0);
+     transform: translate3d(0,0,0);
+ }
+ .fp-prev{
+     left: 15px;
+ }
+ .fp-next{
+     right: 15px;
+ }
+ .fp-arrow{
+     width: 0;
+     height: 0;
+     border-style: solid;
+ }
+ .fp-arrow.fp-prev {
+     border-width: 38.5px 34px 38.5px 0;
+     border-color: transparent #fff transparent transparent;
+ }
+ .fp-arrow.fp-next {
+     border-width: 38.5px 0 38.5px 34px;
+     border-color: transparent transparent transparent #fff;
+ }
+ /* .fp-scrollable {
+     overflow: hidden;
+     position: relative;
+ } */
+ /* .fp-scroller{
+     overflow: hidden;
+ } */
+ /* .iScrollIndicator{
+     border: 0 !important;
+ } */
+ .fp-notransition {
+     -webkit-transition: none !important;
+     transition: none !important;
+ }
+ .fp-auto-height.fp-section,
+ .fp-auto-height .fp-slide{
+     height: auto !important;
+ }
+ 
+ /* Used with autoScrolling: false */ 
+ .fp-scrollable .fp-section,
+ .fp-scrollable .fp-slide{
+    /* Fallback for browsers that do not support Custom Properties */
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+ }
+ 
+ /* Disabling vertical centering on scrollable elements */
+ .fp-overflow{
+     justify-content: flex-start;
+ }
+ 
+ .fp-overflow.fp-auto-height-responsive,
+ .fp-overflow.fp-auto-height,
+ .fp-overflow{
+     overflow-y: scroll;
+     height: 100% !important;
+     outline:none;
+ }
+ 
+ .fp-overflow.fp-table{
+     display: block;
+ }
+ 
+ .fp-responsive .fp-auto-height-responsive.fp-section,
+ .fp-responsive .fp-auto-height-responsive .fp-slide{
+     height: auto !important;
+ }
+ 
+ /*Only display content to screen readers*/
+ .fp-sr-only{
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     overflow: hidden;
+     clip: rect(0, 0, 0, 0);
+     white-space: nowrap;
+     border: 0;
+ }
+ 
+ .fp-snaps{
+     overflow-y: auto !important;
+     height: 100% !important;
+ }
+ .fp-snaps body{
+     height: 100% !important;
+     -ms-scroll-snap-type: y mandatory;
+         scroll-snap-type: y mandatory;
+         overflow-y: scroll !important;
+         scroll-behavior: smooth;
+ }
+ .fp-snaps .fp-section{
+     scroll-snap-align: start;
+ }
+ .fp-snaps .fullpage-wrapper{
+     height: auto !important;
+ }
+ 
+ /* Used for DragAndMove*/
+ .fp-disable-snap body{
+     scroll-behavior: unset !important;
+     scroll-snap-type: none !important;
+ }
+ 
+ /* Customize website's scrollbar like Mac OS
+ Not supports in Firefox and IE */
+ .fp-scroll-mac .fp-overflow::-webkit-scrollbar {
+     background-color: transparent;
+     width: 9px;
+ }
+ .fp-scroll-mac .fp-overflow::-webkit-scrollbar-track {
+     background-color: transparent;
+ }
+ .fp-scroll-mac .fp-overflow::-webkit-scrollbar-thumb {
+     background-color: rgba(0,0,0,.4);
+     border-radius: 16px;
+     border: 4px solid transparent;
+ }
+ .fp-warning,
+ .fp-watermark{
+     z-index: 9999999;
+     position: absolute;
+     bottom: 0;
+ }
+ .fp-warning,
+ .fp-watermark a{
+     text-decoration: none;
+     color: #000;
+     background: rgba(255,255,255,0.6);
+     padding: 5px 8px;
+     font-size: 14px;
+     font-family: arial;
+     color: black;
+     display: inline-block;
+     border-radius: 3px;
+     margin: 12px;
+ }
+ .fp-noscroll {
+     justify-content: flex-start;
+     overflow: hidden;
+ }
+ .fp-watermark {
+    display: none;
+ }
