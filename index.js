@@ -151,8 +151,15 @@ function draw() {
 }
 
 setInterval(draw, DRAW_INTERVAL);
+
 // 슬릭 슬라이드
 $(function(){
     $(".s2").slick();
 });
 
+lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+    disableScrolling: false,
+    fitImagesInViewport:false
+})

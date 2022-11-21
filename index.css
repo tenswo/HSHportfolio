@@ -173,6 +173,7 @@ ul {
     display: flex;
 }
 .inner h2 {
+    height: 70px;
     font-weight: 700;
     font-size: 50px;
     line-height: 68px;
@@ -184,7 +185,7 @@ ul {
     line-height: 34px;
     letter-spacing: -0.05em;
 }
-.inner ul, .profile, .Licence, .Education, .Skills {
+.info .inner ul, .profile, .Licence, .Education, .Skills {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -288,19 +289,20 @@ ul {
     background: url(/HSHportfolio/img/jq.svg) no-repeat;
 }
 /* 웹 페이지 작업물 */
-.s2 {
+.s2, .s3 {
     width: 85%;
     margin: 0 auto;
     position: relative;
 }
-.s2 .inner {
+.s2 .inner,
+.s3 .inner {
     background: #fff;
-    opacity: 80%;
     height: 900px;
 }
-.s2 .inner h2 {
+.s2 .inner h2,
+.s3 .inner h2{
     position: relative;
-    width: 200px;
+    width: 500px;
     top: 20px;
     left: 100px;
 }
@@ -381,6 +383,7 @@ ul {
   height: 50px;
   border-radius: 100%;
   border: none;
+  font-size: 0;
 }
 .s2 .slick-prev,
 .s2 .slick-next {
@@ -409,7 +412,110 @@ ul {
 .s2 .slick-next::before {
   background: url(/HSHportfolio/img/right.svg) no-repeat 50% 50% / contain;
 }
-
+/* 그래픽 디자인 */
+.i3 {
+    width: 1632px;
+    display: flex;
+    flex-direction: column;
+}
+.hover {
+    transform: translateY(-50px);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.hover ul {
+    font-size: 0;
+    height: 350px;
+}
+.hover ul > li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.first1,
+.second2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+}
+.first1,
+.second2 {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.first1 ul,
+.second2 ul {
+    font-size: 0;
+}
+.first1 ul > li,
+.second2 ul > li{
+    display: inline-block;
+    vertical-align: top;
+}
+.first1 ul > li > a,
+.second2 ul > li > a {
+    display: block;
+    width: auto;
+    text-decoration: none;
+    margin: 5px;
+}
+.first1 ul > li > a .screen,
+.second2 ul > li > a .screen{
+    position: relative;
+    overflow: hidden;
+}
+.first1 ul > li > a:hover .screen::after,
+.second2 ul > li > a:hover .screen::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.first1 ul > li > a .screen .top,
+.second2 ul > li > a .screen .top {
+    position: absolute;
+    bottom: 150%;
+    left: 30px;
+    z-index: 2;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    transition: all .35s;
+}
+.first1 ul > li > a .screen .bottom,
+.second2 ul > li > a .screen .bottom {
+    position: absolute;
+    top: 150%;
+    left: 30px;
+    z-index: 2;
+    color: #fff;
+    font-size: 12px;
+    transition: all .35s;
+}
+.first1 ul > li > a .screen img,
+.second2 ul > li > a .screen img {
+    width: 100%;
+}
+.first1 ul > li > a:hover .top,
+.second2 ul > li > a:hover .top {
+    bottom: 52%;
+}
+.first1 ul > li > a:hover .bottom,
+.second2 ul > li > a:hover .bottom {
+    top: 52%;
+}
+.first1 ul > li > a:hover .screen::after,
+.second2 ul > li > a:hover .screen::after {
+    opacity: 1;
+}
 /* 우측 위치 이동 버튼 */
 #fp-nav {
     background: rgba(0, 0, 0, 0.5);
