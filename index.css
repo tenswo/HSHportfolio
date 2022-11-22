@@ -434,6 +434,9 @@ ul {
     display: inline-block;
     margin-right: 20px;
 }
+.first1 a {
+    display: none;
+}
 .first1,
 .second2{
     display: flex;
@@ -478,6 +481,7 @@ ul {
     width: 100%;
     height: 350px;
     background: rgba(0, 0, 0, 0.5);
+    
 }
 .first1 ul > li > a .screen .top,
 .second2 ul > li > a .screen .top {
