@@ -9,14 +9,15 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link href="/HSHportfolio/light/css/lightbox.css" rel="stylesheet">
-    <script src="/HSHportfolio/light/js/lightbox.js"></script>
     <link rel="stylesheet" type="text/css" href="/HSHportfolio/fullpage.min.css">
     <link rel="stylesheet" type="text/css" href="/HSHportfolio/index.css">
 </head>
 <body>
     <div id="gradient">
         <div id="full-page">
+            <!-- 별 하늘 메인 -->
             <section class="section s0">
+                <!-- 그라디언트 배경 -->
                 <canvas class="background"></canvas>
                 <h1 class="ONE">SOO-HO'S</h1>
                 <h1 class="TWO">PORTFOLIO.</h1>
@@ -24,6 +25,7 @@
                     <div class="down"></div>
                 </div>
             </section>
+            <!-- 자기 소개 -->
             <section class="section s1">
                 <div class="about">
                     <h2 class="ME">ABOUT ME</h2>
@@ -83,6 +85,7 @@
                     </div>
                 </div>
             </section>
+            <!-- 웹 프로젝트 작업물 -->
             <section class="section s2">
                 <div class="inner i1">
                     <h2>Project-A</h2>
@@ -131,6 +134,7 @@
                     </div>
                 </div>
             </section>
+            <!-- 그래픽 디자인 작업물 -->
             <section class="section s3">
                 <div class="inner i3">
                     <h2>Graphic Design</h2>
@@ -138,7 +142,7 @@
                         <div class="first1">
                             <ul>
                                 <li>
-                                    <a href="/HSHportfolio/img/worm.jpg" data-lightbox="roadtrip">
+                                    <a href="/HSHportfolio/img/worm.jpg" data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">나왔다 꿈틀이 녀석들</div>
                                             <div class="bottom">캐릭터 디자인</div>
@@ -147,7 +151,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/HSHportfolio/img/glacier.jpg" data-lightbox="roadtrip">
+                                    <a href="/HSHportfolio/img/glacier.jpg" data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">지구온난화 가속화와 악순환</div>
                                             <div class="bottom">인포그래픽</div>
@@ -156,7 +160,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/HSHportfolio/img/kkoisi.jpg" data-lightbox="roadtrip">
+                                    <a href="/HSHportfolio/img/kkoisi.jpg" data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">꼬이시 꼬치구이</div>
                                             <div class="bottom">캐릭터 디자인</div>
@@ -169,7 +173,7 @@
                         <div class="second2">
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href="/HSHportfolio/img/zodiac.jpg" data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">십이지신</div>
                                             <div class="bottom">패턴 디자인</div>
@@ -178,7 +182,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/HSHportfolio/img/soldier-doll.jpg"  data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">병정인형</div>
                                             <div class="bottom">캐릭터 디자인</div>
@@ -187,7 +191,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/HSHportfolio/img/googija.jpg"  data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">고추축제 포스터</div>
                                             <div class="bottom">광고 디자인</div>
@@ -196,7 +200,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/HSHportfolio/img/fine-dust.jpg"  data-lightbox="garaphic">
                                         <div class="screen">
                                             <div class="top">미세먼지 포스터</div>
                                             <div class="bottom">공익광고 디자인</div>
@@ -209,11 +213,26 @@
                     </div>
                 </div>
             </section>
+            <!-- 문자 메일 전송 폼 -->
             <section class="section s4">
-                <h2>Section 4</h2>
+                <h2>Contact</h2>
+                <div class="contact">
+                    <form id="form-send" method="post">
+                        <input class="form-item" type="tel" placeholder="010-6416-9570" name="tel">
+                        <input class="form-item" type="text" placeholder="Name" name="name">
+                        <input class="form-item" type="email" placeholder="Email" name="email">
+                        <input class="form-item" type="text" placeholder="Title" name="title">
+                        <textarea class="form-item" placeholder="Message" name="message"></textarea>
+                        <button class="btn-submit" type="reset" form="form-send" onclick="sendMessage();">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer">
+                    <span>Thank you for waching :]</span>
+                </div>
             </section>
         </div>
     </div>
+    <!-- 페이지 이동 스크롤 버튼 -->
     <div id="fp-nav" class="fp-right">
         <ul>
             <li>
@@ -256,6 +275,7 @@
     <script src="/HSHportfolio/fullpage.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/HSHportfolio/light/js/lightbox.js"></script>
     <script src="/HSHportfolio/index.js"></script>
 </body>
 </html>
