@@ -157,6 +157,7 @@ $(function(){
     $(".s2").slick();
 });
 
+// 라이트 박스
 -lightbox.option({
     resizeDuration: 200,
     wrapAround: true,
