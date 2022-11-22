@@ -157,9 +157,9 @@ $(function(){
     $(".s2").slick();
 });
 
-lightbox.option({
+-lightbox.option({
     resizeDuration: 200,
     wrapAround: true,
     disableScrolling: false,
     fitImagesInViewport:false
-})
+});
