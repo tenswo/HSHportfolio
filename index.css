@@ -193,11 +193,8 @@ ul {
 /* 소닉 달리기 */
 .run {
     position: absolute;
-<<<<<<< HEAD
     top: -135px;
-=======
     top: -16%;
->>>>>>> 7d002e69b3faf5c7e0291f966a0107d2df1416a9
     left: 10%;
     background: url(/HSHportfolio/img/sonic.png);
     overflow: hidden;
@@ -552,7 +549,6 @@ ul {
 .second2 ul > li > a:hover .screen::after {
     opacity: 1;
 }
-<<<<<<< HEAD
 /* 패턴 디자인 */
 .pattern {
     transform: translateY(90px);
@@ -645,8 +641,6 @@ ul {
     line-height: 18px;
     letter-spacing: -0.1em;
 }
-=======
->>>>>>> 7d002e69b3faf5c7e0291f966a0107d2df1416a9
 /* 전송 페이지 */
 .s4 {
     width: 100%;
@@ -655,10 +649,7 @@ ul {
     gap: 20px;
 }
 .s4 h2 {
-<<<<<<< HEAD
     color: #fff;
-=======
->>>>>>> 7d002e69b3faf5c7e0291f966a0107d2df1416a9
     text-align: center;
 }
 .contact {
@@ -707,17 +698,14 @@ textarea {
 }
 /* 푸터 */
 .footer {
-<<<<<<< HEAD
     position: absolute;
     width: 100%;
     height: 70px;
     bottom: 0;
-=======
     position: relative;
     width: 100%;
     height: 70px;
     top: 131px;
->>>>>>> 7d002e69b3faf5c7e0291f966a0107d2df1416a9
     background: #222;
     padding: 20px 830px;
     text-align: center;
