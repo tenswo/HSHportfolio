@@ -158,7 +158,6 @@ $(function(){
     $(".s3").slick();
 });
 
-<<<<<<< HEAD
 // 이메일 전송
 document.querySelector('#form-send').addEventListener('submit', function(event) {
     event.preventDefault(); // submit이벤트 막기
@@ -173,7 +172,6 @@ document.querySelector('#form-send').addEventListener('submit', function(event) 
             console.log('전송실패', error);
         });
 });
-=======
 // 라이트 박스
 -lightbox.option({
     resizeDuration: 200,
@@ -181,4 +179,3 @@ document.querySelector('#form-send').addEventListener('submit', function(event) 
     disableScrolling: false,
     fitImagesInViewport:false
 });
->>>>>>> 7d002e69b3faf5c7e0291f966a0107d2df1416a9
