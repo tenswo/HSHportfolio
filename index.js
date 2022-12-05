@@ -3,12 +3,12 @@ new fullpage('#full-page', {});
 
 // 그라디언트 배경화면
 var colors = new Array(
-    [102, 0, 255],
-    [60,255,60],
-    [255,35,98],
-    [45,175,230],
-    [255,0,255],
-    [255,128,0]);
+    [41, 0, 102],
+    [0, 102, 0],
+    [102, 0, 29],
+    [11, 67, 91],
+    [102, 0, 102],
+    [102, 51, 0]);
   
   var step = 0;
   //color table indices for: 
@@ -155,11 +155,20 @@ setInterval(draw, DRAW_INTERVAL);
 // 슬릭 슬라이드
 $(function(){
     $(".s2").slick();
+    $(".s3").slick();
 });
 
-lightbox.option({
-    resizeDuration: 200,
-    wrapAround: true,
-    disableScrolling: false,
-    fitImagesInViewport:false
-})
+// 이메일 전송
+document.querySelector('#form-send').addEventListener('submit', function(event) {
+    event.preventDefault(); // submit이벤트 막기
+    const fromName = document.querySelector('input[name="from_name"]').value; // 전송자 이름 추출
+
+    emailjs.init("wuAUq3sAgA6OjO4P5"); // API keys
+    emailjs.sendForm('seol2724', 'seol2724', this)
+        .then(function() {
+            alert(`${fromName}님, 메일 전송 완료 되었습니다 :)`)
+        }, function(error) {
+            alert(`${fromName}님, 메일 전송이 실패 되었습니다 :(`)
+            console.log('전송실패', error);
+        });
+});
